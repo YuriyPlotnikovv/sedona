@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project Sedona - Catalog</title>
   <meta name="description" content="Учебный сайт Sedona. Выполняется пользователем GitHub Ankmaster">
+  <link rel="stylesheet" href="/Site_Sedona/styles/styles.css">
 </head>
 
 <body>
   <header class="page-header">
     <a class="site-logo" href="index.html">
-      <img class="logo" src="" alt="Логотип сайта Sedona">
+      <img class="logo" src="/Site_Sedona/img/logo.png" alt="Логотип сайта Sedona">
     </a>
     <nav class="navigation">
-      <ul class="navigation-list">
+      <ul class="navigation-list navigation-main">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html"> Главная </a>
         </li>
@@ -31,26 +32,28 @@
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden"> Поиск </span>
+            <img class="search-icon" src="/Site_Sedona/img/search.svg" width="18" height="18" alt="Поиск">
           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden"> Избранное </span>
+            <img class="favorite-icon" src="/Site_Sedona/img/favorite.svg" width="18" height="17" alt="Избранное">
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#"> Хочу сюда! </a>
+          <a class="navigation-link button" href="#"> Хочу сюда! </a>
         </li>
       </ul>
     </nav>
   </header>
-  <main class="main-inner">
+  <main class="main-page-inner">
     <header class="inner-header">
       <h1 class="inner-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html" title="Главная" target="_self" rel="noopener">
-            <img class="breadcrumbs-icon" src="" alt="Главная">
+            <img class="breadcrumbs-icon" src="/Site_Sedona/img/home-1.svg" alt="Главная">
           </a>
         </li>
         <li class="breadcrumbs-item">
@@ -141,9 +144,9 @@
             Сортировка
           </label>
           <select class="catalog-sorting-value" name="sorting-value" id="sorting-value">
-            <option value="cheap">Сначала дешёвые</option>
+            <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
-            <option value="popular" selected>Сначала популярные</option>
+            <option value="popular">Сначала популярные</option>
           </select>
           <button class="visually-hidden" type="submit">
             Отсортировать список
@@ -153,7 +156,7 @@
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="catalog-view-button" href="#">
-          <span class="visually-hidden">Показать крупные карточки</span>
+          <span class="visually-hidden">Показать слайды</span>
         </a>
         <a class="catalog-view-button" href="#">
           <span class="visually-hidden">Показать список</span>
@@ -162,54 +165,54 @@
       <ul class="product-list">
         <li class="product-item">
           <a class="product-link" href="#">
-            <img class="product-card-image" src="#" alt="Фото отеля">
+            <img class="product-card-image" src="/Site_Sedona/img/hotel-1.jpg" width="300" height="206" alt="Фото отеля">
             <h3 class="product-card-head">Amara Resort & Spa</h3>
           </a>
           <span class="hotel-class">Гостиница</span>
-          От<span class="hotel-price"> 4000 ₽</span>
-          <a class="button-more" href="#"> Подробнее </a>
-          <a class="button-favorites" href="#"> В избранное </a>
-          <img class="hotel-stars" src="#" alt="Четыре звезды">
-          Рейтинг:<span class="hotel-rate">8,5</span>
+          <span class="hotel-price">От 4000 ₽</span>
+          <a class="button button-more" href="#"> Подробнее </a>
+          <a class="button button-favorites" href="#"> В избранное </a>
+          <img class="hotel-stars" src="/Site_Sedona/img/stars-4.svg" width="91" height="17" alt="Четыре звезды">
+          <span class="hotel-rate">Рейтинг: 8,5</span>
         </li>
         <li class="product-item">
           <a class="product-link" href="#">
-            <img class="product-card-image" src="#" alt="Фото отеля">
+            <img class="product-card-image" src="/Site_Sedona/img/hotel-2.jpg" width="300" height="206" alt="Фото отеля">
             <h3 class="product-card-head">Deseert Quail Inn</h3>
           </a>
           <span class="hotel-class">Гостиница</span>
-          От<span class="hotel-price"> 3000 ₽</span>
-          <a class="button-more" href="#"> Подробнее </a>
-          <a class="button-favorites" href="#"> В избранное </a>
-          <img class="hotel-stars" src="#" alt="Три звезды">
-          Рейтинг:<span class="hotel-rate">8,9</span>
+          <span class="hotel-price">От 3000 ₽</span>
+          <a class="button button-more" href="#"> Подробнее </a>
+          <a class="button button-favorites" href="#"> В избранное </a>
+          <img class="hotel-stars" src="/Site_Sedona/img/stars-3.svg" width="68" height="17" alt="Три звезды">
+          <span class="hotel-rate">Рейтинг: 8,9</span>
         </li>
         <li class="product-item">
           <a class="product-link" href="#">
-            <img class="product-card-image" src="#" alt="Фото отеля">
+            <img class="product-card-image" src="/Site_Sedona/img/hotel-3.jpg" width="300" height="206" alt="Фото отеля">
             <h3 class="product-card-head">Villas at Poco Diablo</h3>
           </a>
           <span class="hotel-class">Гостиница</span>
-          От<span class="hotel-price"> 2000 ₽</span>
-          <a class="button-more" href="#"> Подробнее </a>
-          <a class="button-favorites" href="#"> В избранное </a>
-          <img class="hotel-stars" src="#" alt="Две звезды">
-          Рейтинг:<span class="hotel-rate">9,2</span>
+          <span class="hotel-price">от 2000 ₽</span>
+          <a class="button button-more" href="#"> Подробнее </a>
+          <a class="button button-favorites" href="#"> В избранное </a>
+          <img class="hotel-stars" src="/Site_Sedona/img/stars-2.svg" width="43" height="17" alt="Две звезды">
+          <span class="hotel-rate">Рейтинг: 9,2</span>
         </li>
         <li class="product-item">
           <a class="product-link" href="#">
-            <img class="product-card-image" src="#" alt="Фото отеля">
+            <img class="product-card-image" src="/Site_Sedona/img/hotel-4.jpg" width="300" height="206" alt="Фото отеля">
             <h3 class="product-card-head">GreenTree Inn</h3>
           </a>
           <span class="hotel-class">Гостиница</span>
-          От<span class="hotel-price"> 3000 ₽</span>
-          <a class="button-more" href="#"> Подробнее </a>
-          <a class="button-favorites" href="#"> В избранное </a>
-          <img class="hotel-stars" src="#" alt="Две звезды">
-          Рейтинг:<span class="hotel-rate">9,2</span>
+          <span class="hotel-price">От 3000 ₽</span>
+          <a class="button button-more" href="#"> Подробнее </a>
+          <a class="button button-favorites" href="#"> В избранное </a>
+          <img class="hotel-stars" src="/Site_Sedona/img/stars-2.svg" width="43" height="17" alt="Две звезды">
+          <span class="hotel-rate">Рейтинг: 9,2</span>
         </li>
       </ul>
-      <button class="botton product-list-show-more" type="button">
+      <button class="button product-list-show-more" type="button">
         Загрузить ещё
       </button>
       <ul class="pagination-list">
@@ -245,9 +248,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <section class="subscribe">
-      <h3 class="subscribe-header">Подпишитесь на рассылку</h3>
-      <p class="subscribe-description">
+    <section class="subscribe subscribe-inner">
+      <h3 class="subscribe-header subscribe-header-different">Подпишитесь на рассылку</h3>
+      <p class="subscribe-description subscribe-description-different">
         Только полезная информация и никакого спама, честное бойскаутское!
       </p>
       <form class="subscribe-form">
@@ -263,26 +266,26 @@
         <li class="social-icons-item">
           <a class="social-link" href="https://twitter.com/htmlacademy_ru" title="Twitter" target="_blank"
             rel="nofollow noopener">
-            <img class="icons" src="" alt="Twitter">
+            <img class="icons" src="/Site_Sedona/img/social-twitter.svg" width="18" height="15" alt="Twitter">
           </a>
         </li>
         <li class="social-icons-item">
           <a class="social-link" href="https://www.facebook.com/htmlacademy" title="Facebook" target="_blank"
             rel="nofollow noopener">
-            <img class="icons" src="" alt="Facebook">
+            <img class="icons" src="/Site_Sedona/img/social-facebook.svg" width="10" height="18" alt="Facebook">
           </a>
         </li>
         <li class="social-icons-item">
           <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS" title="Youtube" target="_blank"
             rel="nofollow noopener">
-            <img class="icons" src="" alt="Youtube">
+            <img class="icons" src="/Site_Sedona/img/social-youtube.svg" width="20" height="16" alt="Youtube">
           </a>
         </li>
       </ul>
       <a class="contact-phone" href="tel:88128121212"> +7(812)812-12-12 </a>
       <a class="academy-link" href="https://htmlacademy.ru/" title="Разработано в HTML Academy" target="_blank"
         rel="nofollow noopener">
-        <img class="icons" src="" alt="Разработано в HTML Academy">
+        <img class="icons" src="/Site_Sedona/img/html-logo.svg" width="115" height="34" alt="Разработано в HTML Academy">
       </a>
     </section>
   </footer>
