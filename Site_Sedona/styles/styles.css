@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   background-color: #E5E5E5;
   color: #000000;
@@ -38,6 +38,12 @@ a {
 
 .main-page-inner {
   background-color: #ffffff;
+}
+
+.welcome-info {
+  background-image: url(/Site_Sedona/img/background-welcome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .navigation-main {
@@ -115,7 +121,9 @@ a {
 }
 
 .subscribe-index {
-  background-image: url(Site_Sedona\img\background-subscribe.jpg);
+  background-image: url(/Site_Sedona/img/background-subscribe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .subscribe-header {
@@ -147,6 +155,9 @@ a {
 
 .inner-header {
   color: #ffffff;
+  background-image: url(/Site_Sedona/img/catalog-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .catalog-filters {
