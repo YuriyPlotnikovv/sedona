@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Pt Sans";
-  src: local("Pt Sans Bold"),
+  font-family: "PT Sans";
+  src: local("PT Sans Bold"),
        url("/Site_Sedona/fonts/ptsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -192,10 +192,6 @@ a {
   line-height: 23px;
 }
 
-.button {
-  color: #ffffff;
-}
-
 .catalog-search {
   font-weight: 700;
   font-size: 30px;
@@ -292,4 +288,12 @@ a {
 
 .button-gray {
   background-color: #F2F2F2;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button {
+  color: #ffffff;
 }
