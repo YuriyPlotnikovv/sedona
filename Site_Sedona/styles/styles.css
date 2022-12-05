@@ -19,7 +19,7 @@
 body {
   font-family: "PT Sans", sans-serif;
   text-align: center;
-  background-color: #E5E5E5;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -28,22 +28,11 @@ a {
   color: inherit;
 }
 
-.page-header {
-  background-color: #ffffff;
-}
-
-.main-page-index {
-  background-color: #ffffff;
-}
-
-.main-page-inner {
-  background-color: #ffffff;
-}
-
 .welcome-info {
   background-image: url(/Site_Sedona/img/background-welcome.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #E5E5E5;
 }
 
 .navigation-main {
@@ -88,16 +77,17 @@ a {
   color: #333333;
 }
 
-.advantages {
-    background-color: rgba(131, 179, 211, 1);
-}
-
-.advantages-different {
+.dark-blue {
   color: #ffffff;
+  background-color: #83B3D3;
 }
 
-.search {
-  background-color: #ffffff;
+.blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .search-header {
@@ -124,6 +114,7 @@ a {
   background-image: url(/Site_Sedona/img/background-subscribe.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #83B3D3;
 }
 
 .subscribe-header {
@@ -158,6 +149,7 @@ a {
   background-image: url(/Site_Sedona/img/catalog-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #83B3D3;
 }
 
 .catalog-filters {
@@ -267,10 +259,12 @@ a {
   font-size: 20px;
   line-height: 26px;
   color: #ffffff;
+  background-color: #83B3D3;
 }
 
 .pagination-link-current {
   color: #000000;
+  background-color: #F2F2F2;
 }
 
 .product-card-quantity {
@@ -286,4 +280,16 @@ a {
 
 .subscribe-description-different {
   color: #333333;
+}
+
+.button-blue {
+  background-color: #83B3D3;
+}
+
+.button-brown {
+  background-color: #756257;
+}
+
+.button-gray {
+  background-color: #F2F2F2;
 }
