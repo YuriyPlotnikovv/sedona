@@ -16,29 +16,52 @@
   font-display: swap;
 }
 
+html {
+  background-color: #E5E5E5;
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
-  text-align: center;
   background-color: #ffffff;
   color: #000000;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main-conteiner {
+  flex-grow: 1;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
 }
 
 a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: inherit;
 }
 
-.welcome-info {
-  background-image: url(/Site_Sedona/img/background-welcome.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #E5E5E5;
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  margin-right: 30px;
 }
 
 .navigation-main {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  width: 345px;
 }
 
 .navigation-user {
@@ -46,19 +69,51 @@ a {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  width: 264px;
+  margin-left: auto;
 }
 
-.advantages-description-title {
+.main-page-index {
+  text-align: center;
+}
+
+.welcome {
+  background-image: url(/Site_Sedona/img/background-welcome.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #83B3D3;
+  height: 485px;
+}
+
+.welcome-info {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.welcome-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
-.advantages-description {
+.welcome-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 36px;
   color: #333333;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
 }
 
 .advantages-list {
@@ -67,14 +122,8 @@ a {
   line-height: 21px;
 }
 
-.advantages-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-
 .advantages-number {
-  color: #333333;
+  color: inherit;
 }
 
 .dark-blue {
@@ -90,10 +139,16 @@ a {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.search-header {
+.search {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.search-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .search-description {
@@ -108,8 +163,14 @@ a {
   font-size: 20px;
   line-height: 36px;
   color: #ffffff;
+  width: 575px;
 }
 
+.subscribe {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
 .subscribe-index {
   background-image: url(/Site_Sedona/img/background-subscribe.jpg);
   background-repeat: no-repeat;
@@ -117,11 +178,12 @@ a {
   background-color: #83B3D3;
 }
 
-.subscribe-header {
+.subscribe-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .subscribe-description {
@@ -138,6 +200,13 @@ a {
   color: #ffffff;
 }
 
+.contacts {
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+  
+}
 .contact-phone {
   font-weight: 400;
   font-size: 40px;
@@ -150,16 +219,72 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #83B3D3;
+  height: 410px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 70px;
 }
 
 .catalog-filters {
   color: #ffffff;
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.catalog-filters-infrastructure {
+  width: 200px;
+  padding: 0;
+  margin: 0 20px 0 0;
+}
+
+.catalog-filters-house-type {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-filters-price {
+  width: 300px;
+  padding: 0;
+  margin: 0 80px 0 auto;
+}
+
+.filters-buttons {
+  width: 160px;
+  padding: 0;
+}
+
+.catalog-header {
+  display: flex;
+  width: 1060px;
+  margin: 0;
+}
+
+.catalog-search {
+  margin: 0 190px 0 0;
+}
+
+.catalog-sorting-type {
+  margin-right: 80px;
+}
+
+.catalog-view {
+  margin: 0;
 }
 
 .inner-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  margin: 0;
 }
 
 .breadcrumbs-link {
@@ -184,12 +309,19 @@ a {
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
+  width: 160px;
 }
 
 .clear-button {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+  background-color: initial;
+  color: #ffffff;
+}
+
+.catalog-items {
+  margin: 0 70px;;
 }
 
 .catalog-search {
@@ -202,6 +334,13 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
 }
 
 .product-card-head {
@@ -244,10 +383,29 @@ a {
   color: #333333;
 }
 
+.product-list {
+  margin: 0;
+  padding: 0;
+}
+
 .product-list-show-more {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  width: 620px;
+}
+
+.pagination-container {
+  display: flex;
+}
+
+.pagination-list {
+  display: flex;
+  margin: 0;
+}
+
+.quantity-label {
+  margin: 0 0 0 auto;
 }
 
 .pagination-link {
@@ -270,12 +428,18 @@ a {
   color: #333333;
 }
 
-.subscribe--header-different {
+.subscribe-title-different {
   color:#000000
 }
 
 .subscribe-description-different {
   color: #333333;
+}
+
+.button {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .button-blue {
@@ -292,8 +456,4 @@ a {
 
 .button-green {
   background-color: #7DB54F;
-}
-
-.button {
-  color: #ffffff;
 }
