@@ -55,8 +55,7 @@ a {
 
 .page-header {
   display: grid;
-  grid-template-columns: min-content 1fr max-content;
-  gap: 30px;
+  grid-template-columns: min-content auto 322px;
   width: 1060px;
   margin: 0;
   padding: 0 70px;
@@ -87,6 +86,7 @@ a {
   color: #ffffff;
   margin: 0;
   padding: 0;
+  justify-self: end;
 }
 
 .navigation-main .navigation-link {
@@ -105,8 +105,7 @@ a {
 }
 
 .navigation-button {
-  display: block;
-  width: 160px;  
+  display: block;  
   text-decoration: none;
 }
 
@@ -366,18 +365,17 @@ a {
 
 .page-footer {
   display: grid;
-  grid-template-columns: 110px max-content min-content;
+  grid-template-columns: 270px auto 115px;
   margin: 0;
-  justify-content: space-between;
   padding: 0 70px;
   margin-bottom: 40px;
+  gap: 120px;
 }
 
 .social-icons {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 110px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -393,7 +391,7 @@ a {
   margin-bottom: 10px;
 }
 
-.social-icons-item:not(:nth-of-type(3n)) {
+.social-icons-item:not(:nth-of-type(7n)) {
   margin-right: 10px;
 }
 
@@ -538,10 +536,16 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 216px;
 }
 
-.catalog-view-item:not(:last-of-type) {
-    margin-right: 8px;
+.catalog-view-item:not(:nth-of-type(4n)) {
+  margin-right: 8px;
+}
+
+.catalog-view-item {
+  margin-bottom: 8px;
 }
 
 .catalog-view-button {
