@@ -83,19 +83,19 @@
           <ul class="catalog-filters-list">
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-check" type="checkbox" name="swimming-pool" checked>
+                <input class="visually-hidden control-item-check" type="checkbox" name="swimming-pool" checked>
                 <span class="control-label"> Бассейн </span>
               </label>
             </li>
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-check" type="checkbox" name="parking" checked>
+                <input class="visually-hidden control-item-check" type="checkbox" name="parking" checked>
                 <span class="control-label"> Парковка </span>
               </label>
             </li>
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-check" type="checkbox" name="wi-fi">
+                <input class="visually-hidden control-item-check" type="checkbox" name="wi-fi">
                 <span class="control-label"> Wi-Fi </span>
               </label>
             </li>
@@ -106,19 +106,19 @@
           <ul class="catalog-filters-list">
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-radio" type="radio" name="house-type" value="hotel" checked>
+                <input class="visually-hidden control-item-radio" type="radio" name="house-type" value="hotel" checked>
                 <span class="control-label"> Гостиница </span>
               </label>
             </li>
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-radio" type="radio" name="house-type" value="motel">
+                <input class="visually-hidden control-item-radio" type="radio" name="house-type" value="motel">
                 <span class="control-label"> Мотель </span>
               </label>
             </li>
             <li class="catalog-filters-item">
               <label class="control">
-                <input class="control-item-radio" type="radio" name="house-type" value="apartments">
+                <input class="visually-hidden control-item-radio" type="radio" name="house-type" value="apartments">
                 <span class="control-label"> Апартаменты </span>
               </label>
             </li>
@@ -126,22 +126,30 @@
         </fieldset>
         <fieldset class="catalog-filters-price">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <label class="catalog-filters-label">
-            от<input class="catalog-filters-input" type="number" name="min-price" value="0">
-          </label>
-          <label class="catalog-filters-label">
-            до<input class="catalog-filters-input" type="number" name="max-price" value="9000">
-          </label>
-          <button class="range-toggle toggle-min" type="button">
-            <span class="visually-hidden">
-              Изменить минимальную стоимость
-            </span>
-          </button>
-          <button class="range-toggle toggle-max" type="button">
-            <span class="visually-hidden">
-              Изменить максимальную стоимость
-            </span>
-          </button>
+          <div class="range-wrapper-inputs">
+            <label class="catalog-filters-label">
+              <input class="catalog-filters-input" type="number" name="min-price" value="0" max="9000" step="100" placeholder="0">
+              <span class="range-title">от</span>
+            </label>
+            <label class="catalog-filters-label">
+              <input class="catalog-filters-input" type="number" name="max-price" value="9000" max="9000" step="100" placeholder="9000">
+              <span class="range-title">до</span>
+            </label>
+          </div>
+          <div class="range-scale">
+            <div class="range-bar" style="left: 0; width: 227px">
+              <button class="range-toggle toggle-min" type="button">
+                <span class="visually-hidden">
+                  Изменить минимальную стоимость
+                </span>
+              </button>
+              <button class="range-toggle toggle-max" type="button">
+                <span class="visually-hidden">
+                  Изменить максимальную стоимость
+                </span>
+              </button>
+            </div>
+          </div>
         </fieldset>
         <div class="filters-buttons">
           <button class="button submit-button button-blue" type="submit">Применить</button>
@@ -155,28 +163,16 @@
         <p class="catalog-search">
           Найдено гостиниц:<span class="catalog-search-value"> 38</span>
         </p>
-        <h3 class="visually-hidden">
-          Сортировка и отображение
-        </h3>
-        <!-- <details class="catalog-sorting-type">
-          <summary class="sorting-type-label">Сначала дешёвые</summary>
-          <ul class="sorting-links-list">
-            <li class="sirting-links-item">
-              <a class="sorting-link" value="cheap">Сначала дешёвые</a>
-            </li>
-            <li class="sorting-links-item">
-              <a class="sorting-link" value="expensive">Сначала дорогие</a>
-            </li>
-            <li class="sorting-links-item">
-              <a class="sorting-link" value="popular">Сначала популярные</a>
-            </li>
-          </ul>
-        </details> -->
-        <select class="catalog-sorting-type" title="Сортировка">
-          <option value="cheap" selected>Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-          <option value="popular">Сначала популярные</option>
-        </select>
+        <div class="select-sorting-type">
+          <label class="visually-hidden" for="sorting-type">
+            Сортировка и отображение
+          </label>
+          <select class="catalog-sorting-type" id="sorting-type" title="Сортировка">
+            <option value="cheap" selected>Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="popular">Сначала популярные</option>
+          </select>
+        </div>
         <ul class="catalog-sorting-view">
           <li class="catalog-view-item view-item-selected">
             <a class="catalog-view-button view-cards">
@@ -284,14 +280,6 @@
         <p class="quantity-label">
           Гостиниц на странице:
         </p>
-        <!-- <details class="product-card-quantity">
-          <summary class="card-quantity-label">4</summary>
-          <ul class="quantity-select">
-            <li value="four">4</li>
-            <li value="eight">8</li>
-            <li value="twelve">12</li>
-          </ul>
-        </details> -->
         <select class="product-card-quantity" title="Гостиниц на странице">
           <option value="4" selected>4</option>
           <option value="8">8</option>

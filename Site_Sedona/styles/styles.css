@@ -757,7 +757,7 @@ a {
   display: grid;
   grid-template-columns: min-content min-content auto min-content;
   margin: 0;
-  gap: 50px;
+  gap: 55px;
 }
 
 .catalog-filter-title {
@@ -767,11 +767,197 @@ a {
   margin-bottom: 30px;
 }
 
+.catalog-filters-list {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-filters-item:not(:last-of-type) {
+  margin-bottom: 13px;
+}
+
+.catalog-filters-infrastructure {
+  width: 162px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.catalog-filters-house-type {
+  width: 145px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .control-label {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  margin-left: 15px;
+  padding-left: 40px;
+}
+
+.control {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+.control-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-item-check:checked + .control-label::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 6px;
+  left: 6px;
+  background-image: url(/Site_Sedona/img/mark.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.control-item-radio + .control-label::before {
+  border-radius: 50%;
+}
+
+.control-item-radio:checked + .control-label::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 5px solid transparent;
+  background-color: #3f5e72;
+  background-clip: content-box;
+  top: 0;
+  left: 2px;
+  border-radius: 50%;
+}
+
+.catalog-filters-price {
+  padding: 0;
+  margin: 0;
+  margin-left: 113px;
+  justify-self: start;
+  border: none;
+}
+
+.range-wrapper-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  margin-bottom: 28px;
+  margin-top: 5px;
+}
+
+.catalog-filters-label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  color: rgba(0, 0, 0, 0.3);
+  height: 45px;
+  padding-left: 15px;
+  align-self: center;
+}
+
+.catalog-filters-label:last-of-type {
+  border-left: 2px solid #ffffff;
+  padding-left: 13px;
+}
+
+.catalog-filters-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  appearance: textfield;
+}
+
+.catalog-filters-input::-webkit-outer-spin-button, .catalog-filters-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-title {
+  align-self: center;
+  padding-left: 50px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  width: 287px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  left: 0;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 0;
+  top: -8px;
+}
+
+.filters-buttons {
+  width: 160px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
 .submit-button {
@@ -822,65 +1008,6 @@ a {
   outline: none;
 }
 
-.catalog-filters-list {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.catalog-filters-item:not(:last-of-type) {
-  margin-bottom: 13px;
-}
-
-.catalog-filters-infrastructure {
-  width: 167px;
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
-.catalog-filters-house-type {
-  width: 145px;
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
-.catalog-filters-label {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-}
-
-.control {
-  cursor: pointer;
-}
-
-.catalog-filters-price {
-  width: 290px;
-  padding: 0;
-  margin: 0;
-  margin-right: 30px;
-  border: none;
-  justify-self: end;
-}
-
-.catalog-filters-input {
-  width: 110px;
-}
-
-.filters-buttons {
-  width: 160px;
-  padding-top: 60px;
-  display: flex;
-  flex-direction: column;
-}
-
 .catalog-header {
   display: grid;
   grid-template-columns: max-content auto max-content;
@@ -897,20 +1024,31 @@ a {
   margin: 0;
 }
 
+.select-sorting-type {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  width: 287px;
+  margin-right: 80px;
+}
+
 .catalog-sorting-type {
   font-family: inherit;
-  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  margin-right: 81px;
-  justify-self: end;
-  width: 287px;
-  height: 48px;
-  padding: 10px 13px;
-  border-radius: 5px;
-  align-items: flex-start;
   cursor: pointer;
+  width: 100%;
+  padding: 10px 17px;
+  padding-right: 100px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  appearance: none;
+  background-image: url(/Site_Sedona/img/sorting-mark.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  user-select: none;
 }
 
 .catalog-sorting-type:hover {
