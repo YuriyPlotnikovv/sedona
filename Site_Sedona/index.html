@@ -204,6 +204,73 @@
       </svg>
     </a>
   </footer>
+  <section class="modal-container modal-container-closed">
+    <div class="modal-content">
+      <h2 class="modal-title">
+        Поиск гостиницы в Седоне
+      </h2>
+      <button class="modal-button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="modal-button-close-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13">
+          <path fill-rule="evenodd"
+            d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" />
+        </svg>
+      </button>
+      <form class="modal-search-form">
+        <label class="title-modal-form" for="arrival-date">
+          Дата заезда:
+        </label>
+        <input class="date-input" name="arrival-date" id="arrival-date" type="text" placeholder="Укажите дату" value="27 апреля 2020">
+        <p class="modal-message message-error">
+          Мы не можем отправить вас в прошлое.
+        </p>
+        <label class="title-modal-form" for="departure-date">
+          Дата выезда:
+        </label>
+        <input class="date-input" name="departuere-date" id="departure-date" type="text" placeholder="Укажите дату" value="1 сентября 2021">
+        <p class="modal-message message-approval">
+          На эти даты есть свободные номера. Пока есть.
+        </p>
+        <label class="title-modal-form" for="adults">
+          Взрослые:
+        </label>
+        <div class="number-field">
+          <button class="number-button button-count-less" type="button">
+            <span class="visually-hidden">Уменьшить количество</span>
+          </button>
+          <input class="counter-input" name="adults-counter" id="adults" type="number" placeholder="2" value="2">
+          <button class="number-button button-count-more" type="button">
+            <span class="visually-hidden">Увеличить количество</span>
+          </button>
+        </div>
+        <div class="title-counter-wrapper">
+          <label class="title-modal-form" for="childrens">
+            Дети:
+          </label>
+          <span class="tooltip">
+            <p class="tooltip-text">
+              Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+            </p>
+          </span>
+        </div>
+        <div class="number-field">
+          <button class="number-button button-count-less" type="button">
+            <span class="visually-hidden">Уменьшить количество</span>
+          </button>
+          <input class="counter-input" name="childrens-counter" id="childrens" type="number" placeholder="1" value="1">
+          <button class="number-button button-count-more" type="button">
+            <span class="visually-hidden">Увеличить количество</span>
+          </button>
+        </div>
+        <label class="visually-hidden" for="modal-submit-button">
+          Поиск отелей
+        </label>
+        <button class="modal-submit-button" type="submit" id="modal-submit-button">
+          Найти
+        </button>
+      </form>
+    </div>
+  </section>
 </body>
 
 </html>

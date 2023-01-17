@@ -164,10 +164,10 @@
           Найдено гостиниц:<span class="catalog-search-value"> 38</span>
         </p>
         <div class="select-sorting-type">
-          <label class="visually-hidden" for="sorting-type">
+          <label class="visually-hidden" for="catalog-sorting-type">
             Сортировка и отображение
           </label>
-          <select class="catalog-sorting-type" id="sorting-type" title="Сортировка">
+          <select class="catalog-sorting-type" id="catalog-sorting-type" title="Сортировка">
             <option value="cheap" selected>Сначала дешёвые</option>
             <option value="expensive">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
@@ -277,15 +277,17 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-        <p class="quantity-label">
-          Гостиниц на странице:
-        </p>
-        <select class="product-card-quantity" title="Гостиниц на странице">
-          <option value="4" selected>4</option>
-          <option value="8">8</option>
-          <option value="12">12</option>
-          <option value="16">16</option>
-        </select>
+        <div class="product-card-select">
+          <label class="quantity-select-label" for="product-card-quantity">
+            Гостиниц на странице:
+          </label>
+          <select class="product-card-quantity" id="product-card-quantity" title="Гостиниц на странице">
+            <option value="4" selected>4</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+          </select>
+        </div>
       </div>
     </section>
     <section class="subscribe-inner">

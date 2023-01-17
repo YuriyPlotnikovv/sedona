@@ -598,7 +598,7 @@ a {
 }
 
 .social-link:focus {
-  outline-color: #83B3D3;
+  outline: 3px solid #83B3D3;
   outline-offset: 7px;
 }
 
@@ -626,7 +626,7 @@ a {
 }
 
 .contact-phone:focus {
-  outline-color: #83B3D3;
+  outline: 3px solid #83B3D3;
   outline-offset: 10px;
   color: #756257;
 }
@@ -662,7 +662,7 @@ a {
 }
 
 .academy-link:focus {
-  outline-color: #83B3D3;
+  outline: 3px solid #83B3D3;
   outline-offset: 5px;
 }
 
@@ -677,6 +677,202 @@ a {
 
 .academy-link:active .html-logo {
   fill: #756257;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 5;
+  place-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  max-width: 715px;
+  border-radius: 30px;
+  padding: 70px;
+  padding-top: 60px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-button-close {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-button-close-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  fill: #000000;
+}
+
+.modal-title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 61px;
+  padding: 0;
+}
+
+.modal-search-form {
+  display: grid;
+  grid-template-columns: 155px 133px 154px 133px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.title-modal-form {
+  cursor: pointer;
+  align-self: center;
+}
+
+.modal-search-date {
+  grid-column: 1 / 2;
+}
+
+.date-input {
+  box-sizing: border-box;
+  grid-column: 2 / -1;
+  width: 100%;
+  padding: 5px 19px;
+  appearance: none;
+  margin: 0;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.modal-message {
+  font-weight: 400;
+  font-size: 16px;
+  grid-column: 2 / -1;
+  margin: -5px 0 5px 0;
+}
+
+.message-error {
+  color: #ff5757;
+}
+
+.number-field {
+  position: relative;
+  display: flex;
+}
+
+.number-button {
+  position: absolute;
+  width: 45px;
+  height: 100%;
+  border: none;
+  padding: 0;
+  background-color: #F2F2F2;
+  cursor: pointer;
+}
+
+.button-count-less {
+  top: 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.counter-input {
+  font: inherit;
+  width: 135px;
+  padding: 5px 45px;
+  appearance: none;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  appearance: textfield;
+  cursor: pointer;
+}
+
+.button-count-more {
+  top: 0;
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.counter-input::-webkit-outer-spin-button, .counter-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.title-counter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tooltip {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  background-color: #83B3D3;
+  border-radius: 50%;
+  margin: 2px 19px 0 10px;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 128px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 256px;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 21px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip:hover .tooltip-text {
+  display: block;
+}
+
+.modal-submit-button {
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #83B3D3;
+  color: #ffffff;
 }
 
 .inner-header {
@@ -833,6 +1029,20 @@ a {
   background-size: auto;
 }
 
+.control-item-check:hover + .control-label::before {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.control-item-check:focus + .control-label::before {
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3
+}
+
+.control-item-check:active + .control-label::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
 .control-item-radio + .control-label::before {
   border-radius: 50%;
 }
@@ -850,6 +1060,14 @@ a {
   border-radius: 50%;
 }
 
+.control-item-radio:checked:focus + .control-label::before {
+  outline: 3px solid #83B3D3;
+}
+
+.control-item-radio:active + .control-label::before {
+  outline: none;
+}
+
 .catalog-filters-price {
   padding: 0;
   margin: 0;
@@ -861,10 +1079,18 @@ a {
 .range-wrapper-inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
   margin-bottom: 28px;
   margin-top: 5px;
+  position: relative;
+}
+
+.range-wrapper-inputs::before {
+  content: "";
+  position: absolute;
+  height: 47px;
+  left: 50%;
+  margin-left: -1px;
+  border: 1px solid #ffffff;
 }
 
 .catalog-filters-label {
@@ -879,9 +1105,19 @@ a {
   align-self: center;
 }
 
+.catalog-filters-label:first-of-type {
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  margin-right: 1px;
+}
+
 .catalog-filters-label:last-of-type {
-  border-left: 2px solid #ffffff;
   padding-left: 13px;
+  border: 2px solid #ffffff;
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  margin-left: 1px;
 }
 
 .catalog-filters-input {
@@ -899,6 +1135,19 @@ a {
 .catalog-filters-input::-webkit-outer-spin-button, .catalog-filters-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+ .catalog-filters-label:hover, .range-wrapper-inputs:hover::before {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filters-label:focus-within {
+  box-shadow: 0 0 0 3px #68a2ca, inset 0 0 0 3px #68a2ca;
+}
+
+.catalog-filters-label:active {
+  background-color: #756257;
+  box-shadow: none;
 }
 
 .range-title {
@@ -975,11 +1224,10 @@ a {
 
 .submit-button:focus {
   background-color: #68a2ca;
-  outline-color: #ffffff;
+  outline: 3px solid #ffffff;
 }
 
 .submit-button:active {
-  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -999,13 +1247,12 @@ a {
 }
 
 .clear-button:focus {
-  outline-color: #68a2ca;
+  outline: 3px solid #68a2ca;
   outline-offset: -5px;
 }
 
 .clear-button:active {
   color: rgba(255, 255, 255, 0.3);
-  outline: none;
 }
 
 .catalog-header {
@@ -1039,9 +1286,9 @@ a {
   font-size: 18px;
   line-height: 23px;
   cursor: pointer;
+  color: #333333;
   width: 100%;
   padding: 10px 17px;
-  padding-right: 100px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   appearance: none;
@@ -1370,6 +1617,7 @@ a {
 .pagination-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 2px;
 }
 
@@ -1389,13 +1637,6 @@ a {
   color: #ffffff;
   background-color: #83B3D3;
   border-radius: 4px;
-}
-
-.quantity-label {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
-  margin: 0 50px 0 auto;
 }
 
 .pagination-link {
@@ -1437,15 +1678,52 @@ a {
   background-color: #F2F2F2;
 }
 
+.quantity-select-label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0;
+  margin-right: 50px;
+}
+
+.product-card-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 386px;
+}
+
 .product-card-quantity {
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
-  width: 160px;
-  height: 45px;
-  padding: 12px;
   cursor: pointer;
+  width: 160px;
+  height: 48px;
+  padding: 10px 16px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  appearance: none;
+  background-image: url(/Site_Sedona/img/sorting-mark.svg);
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  user-select: none;
+}
+
+.product-card-quantity:hover {
+  border-color: #83B3D3;
+}
+
+.product-card-quantity:focus {
+  outline: none;
+  border-color: #83B3D3;
+}
+
+.product-card-quantity:active {
+  border-color: #E6E6E6;
+  color: #E6E6E6;
 }
 
 .subscribe-title-different {
