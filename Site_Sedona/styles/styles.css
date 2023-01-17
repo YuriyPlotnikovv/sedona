@@ -1,7 +1,7 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-       url("/Site_Sedona/fonts/ptsans-400.woff2") format("woff2");
+       url("../fonts/ptsans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans Bold"),
-       url("/Site_Sedona/fonts/ptsans-700.woff2") format("woff2");
+       url("../fonts/ptsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -125,8 +125,20 @@ a {
 
 .favorite-counter {
   position: absolute;
+  box-sizing: border-box;
   top: 3px;
-  right: 0;
+  right: -2px;
+  width: 19px;
+  height: 19px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  background-color: #7db550;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2px;
 }
 
 .navigation-link-current {
@@ -159,6 +171,10 @@ a {
 
 .navigation-link:active .navigation-icon {
   fill: rgba(117, 98, 87, 0.3);
+}
+
+.navigation-link:active .favorite-counter {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-button {
@@ -205,7 +221,7 @@ a {
 }
 
 .welcome {
-  background-image: url(/Site_Sedona/img/background-welcome.jpg);
+  background-image: url(../img/background-welcome.jpg);
   background-size: 1200px 100%;
   background-repeat: no-repeat;
   background-color: #83B3D3;
@@ -218,7 +234,7 @@ a {
   content: "";
   position: absolute;
   display: block;
-  background-image: url(/Site_Sedona/img/welcome-decor.svg);
+  background-image: url(../img/welcome-decor.svg);
   background-repeat: no-repeat;
   background-size: cover;
   top: 428px;
@@ -307,7 +323,7 @@ a {
 }
 
 .advantages-item:nth-of-type(3)::before {
-  content: url(/Site_Sedona/img/icon-1.svg);
+  content: url(../img/icon-1.svg);
   display: block;
   position: absolute;
   left: 163px;
@@ -321,7 +337,7 @@ a {
 }
 
 .advantages-item:nth-of-type(4)::before {
-  content: url(/Site_Sedona/img/icon-2.svg);
+  content: url(../img/icon-2.svg);
   display: block;
   position: absolute;
   left: 163px;
@@ -336,7 +352,7 @@ a {
 }
 
 .advantages-item:nth-of-type(5)::before {
-  content: url(/Site_Sedona/img/icon-3.svg);
+  content: url(../img/icon-3.svg);
   display: block;
   position: absolute;
   left: 168px;
@@ -461,7 +477,7 @@ a {
 }
 
 .subscribe-index {
-  background-image: url(/Site_Sedona/img/background-subscribe.jpg);
+  background-image: url(../img/background-subscribe.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #83B3D3;
@@ -691,6 +707,10 @@ a {
   place-content: center;
 }
 
+.modal-container-closed {
+  display: none;
+}
+
 .modal-content {
   position: relative;
   background-color: #ffffff;
@@ -721,6 +741,23 @@ a {
   fill: #000000;
 }
 
+.modal-button-close:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-button-close:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-button-close:active {
+  background-color: #E6E6E6;
+}
+
+.modal-button-close:active .modal-button-close-icon {
+  fill: rgba( 0, 0, 0, 0.3);
+}
+
 .modal-title {
   font-family: inherit;
   font-weight: 700;
@@ -742,34 +779,57 @@ a {
   line-height: 40px;
 }
 
-.title-modal-form {
+.title-date-form {
   cursor: pointer;
   align-self: center;
+  grid-column: 1 / 2;
+  position: relative;
 }
 
-.modal-search-date {
-  grid-column: 1 / 2;
+.title-count-form {
+  align-self: center;
+  cursor: pointer;
 }
 
 .date-input {
-  box-sizing: border-box;
   grid-column: 2 / -1;
+  box-sizing: border-box;
   width: 100%;
-  padding: 5px 19px;
+  padding: 3px 19px;
   appearance: none;
   margin: 0;
   background-color: #F2F2F2;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 4px;
   font: inherit;
   cursor: pointer;
+  background-image: url(../img/date-icon.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+}
+
+.date-input:hover {
+  background-color: #E6E6E6;
+}
+
+.date-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.date-input:not(:placeholder-shown):focus {
+  background-color: #ffffff;
+  outline: none;
+  border: 2px solid #000000;
 }
 
 .modal-message {
   font-weight: 400;
   font-size: 16px;
+  line-height: 40px;
   grid-column: 2 / -1;
   margin: -5px 0 5px 0;
+  color: #333333;
 }
 
 .message-error {
@@ -778,49 +838,86 @@ a {
 
 .number-field {
   position: relative;
-  display: flex;
-}
-
-.number-button {
-  position: absolute;
-  width: 45px;
-  height: 100%;
-  border: none;
-  padding: 0;
-  background-color: #F2F2F2;
-  cursor: pointer;
-}
-
-.button-count-less {
-  top: 0;
-  left: 0;
-  border-radius: 4px 0 0 4px;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  min-width: 133px;
+  height: 50px;
+  outline: none;
+  z-index: 0;
 }
 
 .counter-input {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  padding: 0 50px;
   font: inherit;
-  width: 135px;
-  padding: 5px 45px;
-  appearance: none;
   margin: 0;
-  box-sizing: border-box;
-  background-color: #F2F2F2;
-  border: none;
-  border-radius: 4px;
   text-align: center;
   appearance: textfield;
   cursor: pointer;
-}
-
-.button-count-more {
-  top: 0;
-  right: 0;
-  border-radius: 0 4px 4px 0;
+  background-color: #F2F2F2;
+  border: none;
+  outline: none;
+  border-radius: 4px;
 }
 
 .counter-input::-webkit-outer-spin-button, .counter-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.number-button {
+  position: relative;
+  grid-row: 1 / 2;
+  display: grid;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+  place-content: center;
+  background-color: transparent;
+  outline: none;
+}
+
+.button-count-less {
+  grid-column: 1 / 2;
+}
+
+.button-count-more {
+  grid-column: -2 / -1;
+}
+
+.number-button::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 4px;
+  opacity: 0.3;
+}
+
+.button-count-less::after {
+  background-image: url(../img/counter-less-icon.svg);
+}
+
+.button-count-more::after {
+  background-image: url(../img/counter-more-icon.svg);
+}
+
+.number-button:hover::after {
+  opacity: 1;
+}
+
+.number-button:focus::after {
+  opacity: 1;
+  outline: 3px solid #83B3D3;
+  outline-offset: -4px;
+}
+
+.number-button:active::after {
+  outline: none;
+  opacity: 0.2;
 }
 
 .title-counter-wrapper {
@@ -836,6 +933,9 @@ a {
   background-color: #83B3D3;
   border-radius: 50%;
   margin: 2px 19px 0 10px;
+  background-image: url(../img/info-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .tooltip-text {
@@ -854,6 +954,23 @@ a {
   border-radius: 10px;
   padding: 21px;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #333333;
+  top: -10px;
+  left: 122px;
+  transform-origin: 0;
+  transform: rotate(45deg);
+}
+
+.tooltip:hover {
+  background-color: #68a2ca;
 }
 
 .tooltip:hover .tooltip-text {
@@ -875,9 +992,23 @@ a {
   color: #ffffff;
 }
 
+.modal-submit-button:hover {
+  background-color: #68a2ca;
+}
+
+.modal-submit-button:focus {
+  background-color: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.modal-submit-button:active {
+  background-color: #68a2ca;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .inner-header {
   color: #ffffff;
-  background-image: url(/Site_Sedona/img/catalog-background.jpg);
+  background-image: url(../img/catalog-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #83B3D3;
@@ -911,7 +1042,7 @@ a {
   content: "";
   width: 10px;
   height: 10px;
-  background-image: url("/Site_Sedona/img/bread.svg");
+  background-image: url("../img/bread.svg");
   background-repeat: no-repeat;
   position: absolute;
   top: 7px;
@@ -1024,7 +1155,7 @@ a {
   height: 15px;
   top: 6px;
   left: 6px;
-  background-image: url(/Site_Sedona/img/mark.svg);
+  background-image: url(../img/mark.svg);
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -1099,7 +1230,7 @@ a {
   line-height: 23px;
   display: grid;
   grid-template-columns: 44px 1fr;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
   height: 45px;
   padding-left: 15px;
   align-self: center;
@@ -1145,7 +1276,8 @@ a {
   box-shadow: 0 0 0 3px #68a2ca, inset 0 0 0 3px #68a2ca;
 }
 
-.catalog-filters-label:active {
+.catalog-filters-label:not(:placeholder-shown):focus-within {
+  outline: none;
   background-color: #756257;
   box-shadow: none;
 }
@@ -1292,7 +1424,7 @@ a {
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   appearance: none;
-  background-image: url(/Site_Sedona/img/sorting-mark.svg);
+  background-image: url(../img/sorting-mark.svg);
   background-repeat: no-repeat;
   background-position: right 20px center;
   user-select: none;
@@ -1343,15 +1475,15 @@ a {
 }
 
 .view-cards {
-  background-image: url(/Site_Sedona/img/mode-cards.svg);
+  background-image: url(../img/mode-cards.svg);
 }
 
 .view-slides {
-  background-image: url(/Site_Sedona/img/mode-slides.svg);
+  background-image: url(../img/mode-slides.svg);
 }
 
 .view-list {
-  background-image: url(/Site_Sedona/img/mode-list.svg);
+  background-image: url(../img/mode-list.svg);
 }
 
 .view-item-selected .catalog-view-button {
@@ -1532,7 +1664,7 @@ a {
   width: 24px;
   min-height: 24px;
   margin: 0;
-  background-image: url(/Site_Sedona/img/star.svg);
+  background-image: url(../img/star.svg);
   background-repeat: repeat-x;
   background-position: 0 50%;
   background-size: 24px 17px;
@@ -1706,7 +1838,7 @@ a {
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   appearance: none;
-  background-image: url(/Site_Sedona/img/sorting-mark.svg);
+  background-image: url(../img/sorting-mark.svg);
   background-repeat: no-repeat;
   background-position: right 18px center;
   user-select: none;
