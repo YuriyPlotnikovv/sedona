@@ -815,7 +815,8 @@ a {
   border-radius: 4px;
 }
 
-.counter-input::-webkit-outer-spin-button, .counter-input::-webkit-inner-spin-button {
+.counter-input::-webkit-outer-spin-button,
+.counter-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
@@ -1213,17 +1214,21 @@ a {
   appearance: textfield;
 }
 
-.catalog-filters-input::-webkit-outer-spin-button, .catalog-filters-input::-webkit-inner-spin-button {
+.catalog-filters-input::-webkit-outer-spin-button,
+.catalog-filters-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
- .catalog-filters-label:hover, .range-inputs:hover::before {
+ .catalog-filters-label:hover,
+ .range-inputs:hover::before {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
 .catalog-filters-label:focus-within {
-  box-shadow: 0 0 0 3px #68a2ca, inset 0 0 0 3px #68a2ca;
+  box-shadow:
+  0 0 0 3px #68a2ca,
+  inset 0 0 0 3px #68a2ca;
 }
 
 .catalog-filters-label:active {
