@@ -53,6 +53,10 @@ a {
   color: inherit;
 }
 
+img {
+  object-fit: contain;
+}
+
 .page-header {
   display: grid;
   grid-template-columns: min-content auto 306px;
@@ -283,6 +287,10 @@ a {
   counter-increment: advantages-number;
 }
 
+.advantages-item:nth-of-type(2n+4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
 .advantages-item-large {
   grid-column: 1 / -1;
   display: grid;
@@ -320,6 +328,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.first-advantage-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
 .item-house {
   background-image: url(../img/house-icon.svg);
   background-size: 75px 73px;
@@ -336,10 +348,6 @@ a {
   background-image: url(../img/souvenirs-icon.svg);
   background-size: 64px 76px;
   background-position: 50% 85px;
-}
-
-.first-advantage-item:nth-child(even) {
-  background-color: #ffffff;
 }
 
 .advantages-description {
@@ -589,6 +597,7 @@ a {
 
 .contact-phone {
   display: block;
+  max-width: 720px;
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
@@ -969,7 +978,7 @@ a {
   background-size: cover;
   background-position: 50% 50%;
   background-color: #83B3D3;
-  padding: 35px 70px 80px 70px;
+  padding: 35px 70px 82px 70px;
   display: flex;
   flex-direction: column;
   margin-bottom: 42px;
@@ -983,33 +992,38 @@ a {
 }
 
 .breadcrumbs {
-  position: relative;
   list-style-type: none;
   margin: -7px 0 46px 3px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
 }
 
-.breadcrumbs-item:not(:last-of-type) {
-  margin-right: 26px;
-  align-self: center;
+.breadcrumbs-item {
+  position: relative;
 }
 
-.breadcrumbs-item:last-of-type::before {
+.breadcrumbs-item::after {
   content: "";
   width: 10px;
   height: 10px;
   background-image: url("../img/breadcrumbs-icon.svg");
   background-repeat: no-repeat;
   position: absolute;
-  top: 7px;
-  left: 24px;
+  top: 8px;
+  right: -21px;
+}
+
+.breadcrumbs-item:last-of-type::after {
+  content: none;
 }
 
 .breadcrumbs-link {
   text-decoration: none;
   position: relative;
-  display: block;
+  display: grid;
+  place-content: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -1033,11 +1047,7 @@ a {
 
 .breadcrumbs-icon {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  margin: 5px auto;
   fill: #ffffff;
 }
 
@@ -1054,10 +1064,12 @@ a {
   padding: 0;
   margin: 0;
   border: none;
+  max-width: 155px;
 }
 
 .filters-price {
   margin: 0 15px 0 104px;
+  max-width: 287px;
 }
 
 .catalog-filter-title {
@@ -1240,6 +1252,7 @@ a {
 .range-title {
   align-self: center;
   padding-left: 50px;
+  overflow: auto;
 }
 
 .range-scale {
@@ -1351,6 +1364,7 @@ a {
   margin-bottom: 51px;
   align-items: center;
   justify-content: space-between;
+  max-width: 1060px;
 }
 
 .catalog-search {
@@ -1360,13 +1374,15 @@ a {
   text-transform: uppercase;
   margin: 0;
   margin-right: 115px;
+  max-width: 440px;
+  overflow: auto;
 }
 
 .select-sorting-type {
   position: relative;
   display: flex;
   align-items: center;
-  width: 287px;
+  min-width: 287px;
 }
 
 .catalog-sorting-view {
@@ -1376,8 +1392,8 @@ a {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-self: end;
   max-width: 216px;
+  justify-content: end;
 }
 
 .catalog-sorting-type {
@@ -1512,9 +1528,15 @@ a {
   margin: 0;
   padding: 0;
   order: 2;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  margin: 0;
 }
 
 .product-card-image {
+  display: block;
   order: 1;
   margin-bottom: 16px;
 }
@@ -1652,7 +1674,7 @@ a {
 }
 
 .hotel-rate {
-  display: inline-block;
+  display: block;
   font-family: inherit;
   text-transform: uppercase;
   text-align: center;
@@ -1667,21 +1689,8 @@ a {
   font-size: 16px;
   line-height: 21px;
   color: #333333;
-  justify-self: end;
   padding: 8px 32px;
   background-color: #F2F2F2;
-}
-
-.product-card-head {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 31px;
-  color: #000000;
-  margin: 0;
-}
-
-.product-card-image {
-  display: block;
 }
 
 .product-list-show-more {
@@ -1720,12 +1729,13 @@ a {
 }
 
 .pagination-list {
-  display: grid;
-  grid-template-columns: repeat(6, 55px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 630px;
 }
 
 .pagination-item {
