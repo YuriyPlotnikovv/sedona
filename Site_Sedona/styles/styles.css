@@ -114,7 +114,7 @@ a {
   outline-offset: -1px;
 }
 
-.navigation-link:active {
+.navigation-link[href]:active {
   color: rgba(117, 98, 87, 0.3);
 }
 
@@ -498,7 +498,7 @@ a {
   outline: 3px solid #83B3D3;
 }
 
-.email-form:focus:invalid {
+.email-form:not(:placeholder-shown):focus:invalid {
   background-color: #ffffff;
   outline: 2px solid #ff5757;
   outline-offset: -2px;
@@ -527,6 +527,7 @@ a {
 }
 
 .email-button:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -703,6 +704,7 @@ a {
 }
 
 .modal-button-close:active {
+  outline: none;
   background-color: #E6E6E6;
 }
 
@@ -954,6 +956,7 @@ a {
 }
 
 .modal-submit-button:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1020,6 +1023,11 @@ a {
 .breadcrumbs-link[href]:focus {
   outline-color: #83B3D3;
   outline-offset: 5px;
+}
+
+.breadcrumbs-link[href]:active {
+  outline: none;
+  opacity: 0.3;
 }
 
 .breadcrumbs-icon {
@@ -1160,7 +1168,7 @@ a {
 .range-inputs::before {
   content: "";
   position: absolute;
-  height: 47px;
+  height: 96%;
   left: 50%;
   margin-left: -1px;
   border: 1px solid #ffffff;
@@ -1218,7 +1226,7 @@ a {
   box-shadow: 0 0 0 3px #68a2ca, inset 0 0 0 3px #68a2ca;
 }
 
-.catalog-filters-label:not(:placeholder-shown):focus-within {
+.catalog-filters-label:active {
   outline: none;
   background-color: #756257;
   box-shadow: none;
@@ -1302,6 +1310,7 @@ a {
 }
 
 .submit-button:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1314,7 +1323,7 @@ a {
   color: #ffffff;
   align-self: center;
   text-transform: none;
-  padding: 4px 3px;
+  padding: 3px 14px;
 }
 
 .clear-button:hover {
@@ -1323,10 +1332,10 @@ a {
 
 .clear-button:focus {
   outline: 3px solid #68a2ca;
-  outline-offset: -5px;
 }
 
 .clear-button:active {
+  outline: none;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1517,7 +1526,7 @@ a {
   outline: 3px solid #83B3D3;
 }
 
-.product-card-image:active {
+.product-link:active .product-card-image {
   outline: none;
   opacity: 0.3;
 }
@@ -1586,6 +1595,7 @@ a {
 }
 
 .button-favorites:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1603,6 +1613,7 @@ a {
 }
 
 .button-favorites-selected:active {
+  outline: none;
   background-color: #6c9e42;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1691,6 +1702,7 @@ a {
 }
 
 .product-list-show-more:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -1749,7 +1761,8 @@ a {
   outline-offset: 0;
 }
 
-.pagination-link:active {
+.pagination-link[href]:active {
+  outline: none;
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
 }
