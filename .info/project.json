@@ -1,0 +1,54 @@
+{
+  "id": 0,
+  "title-ru": "Sedona",
+  "title-en": "Sedona",
+  "textFirst-ru": "Проект на вёрстку",
+  "textFirst-en": "Layout project",
+  "textSecond-ru": "Первый учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Простой проект по изучению базовой разметки и стилизации, без логики взаимодействия с пользователем.",
+  "textSecond-en": "The first training project developed as part of the Frontend Developer course from the HTML Academy. A simple project to study basic markup and styling, without the logic of user interaction.",
+  "deploy": "https://sedona-training.netlify.app/",
+  "features": [
+    {
+      "name-ru": "Страницы",
+      "name-en": "Pages",
+      "description-ru": [
+        "Главная",
+        "Каталог",
+        "Модальное окно"
+      ],
+      "description-en": [
+        "Main",
+        "Catalog",
+        "Modal window"
+      ]
+    },
+    {
+      "name-ru": "Функциональность",
+      "name-en": "Functionality",
+      "description-ru": [
+        "Ручная оптимизация всех фотографий"
+      ],
+      "description-en": [
+        "Manual optimization of all photos"
+      ]
+    },
+    {
+      "name-ru": "Не реализовано",
+      "name-en": "Not Implemented",
+      "description-ru": [
+        "Страница «О Седоне»",
+        "Слайдер в каталоге",
+        "Сортировка и вид карточек в каталоге",
+        "Динамическая загрузка карточек",
+        "Адаптивность под разные устройства"
+      ],
+      "description-en": [
+        "The «About Sedona» page",
+        "Slider in the catalog",
+        "Sorting and type of cards in the catalog",
+        "Dynamic loading of cards",
+        "Adaptability to different devices"
+      ]
+    }
+  ]
+}
