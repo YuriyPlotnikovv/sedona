@@ -9,6 +9,16 @@
   "deploy": "https://sedona-training.netlify.app/",
   "features": [
     {
+      "name-ru": "Дата разработки",
+      "name-en": "Development date",
+      "description-ru": [
+        "Ноябрь 2022"
+      ],
+      "description-en": [
+        "November 2022"
+      ]
+    },
+    {
       "name-ru": "Страницы",
       "name-en": "Pages",
       "description-ru": [
@@ -49,6 +59,23 @@
         "Dynamic loading of cards",
         "Adaptability to different devices"
       ]
+    }
+  ],
+  "technologies": [
+    {
+      "name": "HTML",
+      "icon": "icon-html",
+      "link": "https://html.spec.whatwg.org/multipage/"
+    },
+    {
+      "name": "CSS",
+      "icon": "icon-css",
+      "link": "https://www.w3.org/Style/CSS/"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "icon-js",
+      "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
     }
   ]
 }
