@@ -6,6 +6,6 @@
 * папка с изображениями
 * версия для пк, без адаптива
 ---
-Деплой проекта: https://sedona-training.netlify.app/
+Деплой проекта: https://sedona-training.yp-projects.ru/
 ---
 Мой первый учебный проект, написанный в рамках курса Frontend-разработчик от HTML Academy
